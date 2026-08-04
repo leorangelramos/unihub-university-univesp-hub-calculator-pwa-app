@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calendário Acadêmico Univesp - Datas, Prazos e Matrículas</title>
+    <meta name="description" content="Calendário Acadêmico 2026/2027 da Univesp completo e não oficial. Acompanhe as datas de renovação de matrícula, escolha de grupos de PI, provas, exames e início das aulas.">
+    <meta name="keywords" content="Calendário Univesp 2026, Calendário Univesp 2027, Renovação de Matrícula Univesp, Datas Provas Univesp, Escolha Grupo PI, Início Aulas Univesp, Exames Univesp">
+    <meta name="author" content="Univesp Calculadora">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://univespcalculadora.netlify.app/calendario.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://univespcalculadora.netlify.app/calendario.html">
+    <meta property="og:title" content="Calendário Univesp 26/27 - Datas e Prazos">
+    <meta property="og:description" content="Confira todas as datas importantes da Univesp: Matrículas, PI, Provas e Exames a partir de Maio de 2026 até Janeiro de 2027.">
+    <meta property="og:image" content="https://univespcalculadora.netlify.app/Univesplogo.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://univespcalculadora.netlify.app/calendario.html">
+    <meta property="twitter:title" content="Calendário Univesp 26/27 - Datas e Prazos">
+    <meta property="twitter:description" content="Confira todas as datas importantes da Univesp: Matrículas, PI, Provas e Exames a partir de Maio de 2026 até Janeiro de 2027.">
+    <meta property="twitter:image" content="https://univespcalculadora.netlify.app/Univesplogo.webp">
+
+    <link rel="icon" type="image/webp" href="Univesplogo.webp">
+    <meta name="theme-color" content="#b71c1c">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS ESPECÍFICO DO CALENDÁRIO */
+        
+        .alert-box {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: left;
+            line-height: 1.5;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .bimestre-block {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .bimestre-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #f5f5f5;
+            padding-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid #e0e0e0;
+            margin-left: 5px;
+        }
+
+        .event-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .event-item:last-child { margin-bottom: 0; }
+
+        /* Marcador da linha do tempo */
+        .event-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .event-date {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .event-desc {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* Tipos de Eventos */
+        .event-item.important::before {
+            background-color: #ff9800;
+            border-color: #ff9800;
+        }
+        .event-item.important .event-date { color: #e65100; }
+        .event-item.important { background-color: #fff8e1; padding: 10px 10px 10px 20px; border-radius: 0 8px 8px 0; margin-left: -20px; width: calc(100% + 20px); }
+
+        .event-item.admin::before { border-color: #2196f3; }
+        .event-item.admin .event-date { color: #1565c0; }
+
+        .btn-official {
+            background-color: var(--text-main);
+            color: white;
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-official:hover { background-color: #000; transform: translateY(-2px); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Schedule",
+      "name": "Calendário Acadêmico Univesp",
+      "description": "Cronograma projetado do ano letivo para alunos da Univesp.",
+      "url": "https://univespcalculadora.netlify.app/calendario.html",
+      "event": [
+        { "@type": "EducationEvent", "name": "Entrega Final PI", "startDate": "2026-05-11", "endDate": "2026-05-24", "description": "Entrega final 1º semestre" },
+        { "@type": "EducationEvent", "name": "Provas 2º Bimestre", "startDate": "2026-05-18", "endDate": "2026-05-29", "description": "Avaliações presenciais" },
+        { "@type": "EducationEvent", "name": "Renovação 2º Semestre", "startDate": "2026-06-30", "endDate": "2026-07-06", "description": "Matrículas para 2026/2" },
+        { "@type": "EducationEvent", "name": "Início Aulas 2º Semestre", "startDate": "2026-08-03", "description": "Volta às aulas" },
+        { "@type": "EducationEvent", "name": "Provas 3º Bimestre", "startDate": "2026-09-21", "endDate": "2026-09-30", "description": "Avaliações presenciais" },
+        { "@type": "EducationEvent", "name": "Provas 4º Bimestre", "startDate": "2026-11-23", "endDate": "2026-12-04", "description": "Avaliações finais de 2026" },
+        { "@type": "EducationEvent", "name": "Ano Novo 2027", "startDate": "2027-01-01", "description": "Feriado Nacional" },
+        { "@type": "EducationEvent", "name": "Início Aulas 2027", "startDate": "2027-01-25", "description": "Início do 1º Semestre de 2027" }
+      ]
+    }
+    </script>
+    
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          appId: "c322be8d-cbcd-40a0-b928-5b3fff29e3ed",
+          safari_web_id: "web.onesignal.auto.xxxxx",
+          notifyButton: {
+            enable: true,
+            size: 'medium',
+            theme: 'default',
+            position: 'bottom-right',
+            showCredit: false,
+            text: {
+                'tip.state.unsubscribed': 'Receber lembretes de prazos',
+                'tip.state.subscribed': 'Você está inscrito nos lembretes',
+                'tip.state.blocked': 'Você bloqueou as notificações',
+                'message.action.subscribed': 'Obrigado por se inscrever!',
+                'message.action.resubscribed': 'Você está inscrito novamente.',
+                'message.action.unsubscribed': 'Você não receberá mais lembretes.',
+                'dialog.main.title': 'Gerenciar Notificações',
+                'dialog.main.button.subscribe': 'INSCREVER',
+                'dialog.main.button.unsubscribe': 'SAIR',
+                'dialog.blocked.title': 'Desbloquear Notificações',
+                'dialog.blocked.message': 'Siga as instruções para permitir as notificações.'
+            }
+          },
+          allowLocalhostAsSecureOrigin: true,
+        });
+      });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT80KW5HKK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JT80KW5HKK');
+
+      window.addEventListener('appinstalled', () => {
+        gtag('event', 'pwa_install', { 
+            'event_category': 'App', 
+            'event_label': 'Instalacao_Sucesso',
+            'value': 1
+        });
+      });
+    </script>
+
+</head>
+<body>
+
+    <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Calendário Acadêmico Univesp: Datas de Provas, Matrículas e PI</h1>
+
+    <header>
+        <h2 style="margin: 0; font-size: 1.5rem;">Calendário Univesp 📅</h2>
+    </header>
+
+    <div class="container">
+        <div class="calc-container">
+
+            <a href="https://apps.univesp.br/manual-do-aluno/calendario-academico/" target="_blank" class="btn-official" aria-label="Acessar o Calendário Acadêmico Oficial da Univesp">
+                Ver Calendário <i data-lucide="external-link" width="18"></i>
+            </a>
+
+            <button onclick="window.location.href='index.html'" class="btn-back" aria-label="Voltar para o Menu Principal">← Voltar ao Menu</button>
+
+        </div>
+    </div>
+
+    <script>
+    lucide.createIcons();
+    </script>
+
+</body>
+</html>
