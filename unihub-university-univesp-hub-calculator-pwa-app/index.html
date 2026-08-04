@@ -175,9 +175,44 @@
         <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Univesp: Calculadora de Notas e Média final, semanal, exame</h1>
 
         <header>
-            <p>REMATRÍCULA: 30/06 - 06/07</p>
-            <p>App não oficial! De:Nov/2025. Pode conter erros.</p>
-            <p>Last Update: 19/04/26 - version 1.1 </p>
+            <p>App NÃO oficial! Pode conter erros. De:Nov/2025.</p>
+            <p>Compartilhe: https://univespcalculadora.netlify.app/ </p>
+            
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+                <button id="install-btn" aria-label="Instalar no Android">
+                    <i data-lucide="smartphone" style="width: 12px; height: 12px;"></i> Android
+                </button>
+                <button id="install-btn-ios" aria-label="Instruções para iOS" onclick="alert('Para instalar no iOS:\n\n1. Abra este site no Safari.\n2. Toque no botão Compartilhar (quadrado com uma seta para cima).\n3. Role para baixo e selecione \'Adicionar à Tela de Início\'.\n4. Confirme tocando em \'Adicionar\'.')">
+                    <i data-lucide="apple" style="width: 12px; height: 12px;"></i> iOS
+                </button>
+            </div>
+
+
+
+            <div class="social-share" style="text-align: center; margin: 30px 0 10px 0; padding: 15px; background: #f9fafb; border-radius: 12px;">
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; max-width: 80%; margin: 0 auto;">
+                
+                <a href="https://api.whatsapp.com/send?text=Confira%20o%20Univesp%20Hub!%20Calculadora%20de%20Notas%20e%20Ferramentas:%20https://univespcalculadora.netlify.app/" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px; padding: 6px 2px; background: #25D366; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;" title="WhatsApp">
+                    <i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> <span>WhatsApp</span>
+                </a>
+                
+                <a href="https://t.me/share/url?url=https://univespcalculadora.netlify.app/&text=Confira%20o%20Univesp%20Hub!%20Calculadora%20de%20Notas%20e%20Ferramentas%20para%20alunos." target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px; padding: 6px 2px; background: #0088cc; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;" title="Telegram">
+                    <i data-lucide="send" style="width: 14px; height: 14px;"></i> <span>Telegram</span>
+                </a>
+
+                <a href="https://twitter.com/intent/tweet?url=https://univespcalculadora.netlify.app/&text=Confira%20o%20Univesp%20Hub!%20Calculadora%20de%20Notas%20e%20Ferramentas%20para%20alunos." target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px; padding: 6px 2px; background: #000000; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;" title="X">
+                    <i data-lucide="twitter" style="width: 14px; height: 14px;"></i> <span>X</span>
+                </a>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://univespcalculadora.netlify.app/" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px; padding: 6px 2px; background: #1877F2; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;" title="Facebook">
+                    <i data-lucide="facebook" style="width: 14px; height: 14px;"></i> <span>Facebook</span>
+                </a>
+
+            </div>
+
+            </div>
+
         </header>
 
         <div class="container">
@@ -204,7 +239,23 @@
                 </div>
                 <span>Acesso ao <br> YouTube</span>
             </a>
+
+            <a href="calendario.html" class="menu-item" aria-label="Acessar o Calendário Acadêmico">
+                <div class="icon-box"><i data-lucide="calendar"></i></div>
+                <span>Calendário <br> da Univesp</span>
+            </a>
+
+            <a href="https://www.bvirtual.com.br/" target="_blank" class="menu-item" aria-label="Biblioteca Virtual">
+                <div class="icon-box" style="background: #e3f2fd;"><i data-lucide="book-open" style="color: #111112;"></i></div>
+                <span>Biblioteca <br> Virtual</span>
+            </a>
+
             
+            <a href="https://apps.univesp.br/manual-do-aluno/" target="_blank" class="menu-item" aria-label="Manual do aluno">
+                <div class="icon-box" style="background: #e3f2fd;"><i data-lucide="book" style="color: #030303;"></i></div>
+                <span>Manual <br> do aluno</span>
+            </a>
+
             <a href="https://atendimento.univesp.br/sae/portal.html" target="_blank" class="menu-item sae" aria-label="Acessar o Sistema de Atendimento ao Estudante (SAE)">
                 <div class="icon-box"><i data-lucide="headset"></i></div>
                 <span>Acesso ao <br> SAE</span>
@@ -212,11 +263,16 @@
 
             <a href="tcc-pi-estagio.html" class="menu-item" aria-label="Informações sobre TCC, PI e Estágio">
                 <div class="icon-box" style="background: #e3f2fd;">
-                <i data-lucide="graduation-cap" style="color: #1976d2;"></i>
+                <i data-lucide="graduation-cap" style="color: #0b0b0b;"></i>
                 </div>
                 <span>TCC / PI<br>Estágio<small></small></span>
             </a>
 
+            <a href="#" onclick="toggleAccordion(); return false;" class="menu-item" aria-label="Dúvidas Frequentes">
+                <div class="icon-box" style="background: #f3f4f6;"><i data-lucide="help-circle" style="color: #4b5563;"></i></div>
+                <span>Dúvidas <br> FAQ</span>
+            </a>
+            
             <a href="media-final.html" class="menu-item" aria-label="Calculadora de Média Regular">
                 <div class="icon-box"><i data-lucide="calculator"></i></div>
                 <span>Média <br> Regular<small></small></span>
@@ -230,77 +286,19 @@
                 <span>Atividades <br> Semanais</span>
             </a>
     
-            <a href="calendario.html" class="menu-item" aria-label="Acessar o Calendário Acadêmico">
-                <div class="icon-box"><i data-lucide="calendar"></i></div>
-                <span>Calendário <br> da Univesp</span>
-            </a>
             <a href="prazo-final-de-entrega-univesp-alarme-atividades.html" class="menu-item" aria-label="Visualizar Prazos Finais de Entrega">
-                <div class="icon-box" style="background: #ffe5e5;"><i data-lucide="clock" style="color: #b71c1c;"></i></div>
+                <div class="icon-box" style="background: #ffe5e5;"><i data-lucide="clock" style="color: #090909;"></i></div>
                 <span>Prazos de <br> entrega<small></small></span>
             </a>
 
             <a href="minha-grade-de-materias-curso-univesp.html" class="menu-item" aria-label="Visualizar Minha Grade e Progresso">
-                <div class="icon-box" style="background: #e8f5e9;"><i data-lucide="check-square" style="color: #2e7d32;"></i></div>
+                <div class="icon-box" style="background: #e8f5e9;"><i data-lucide="check-square" style="color: #070707;"></i></div>
                 <span>Minha <br> Grade<small></small></span>
             </a>
 
         </div>
-
-        <div class="social-share" style="text-align: center; margin: 30px 0 10px 0; padding: 15px; background: #f9fafb; border-radius: 12px;">
-            <p style="margin-bottom: 15px; font-weight: 600; color: #374151; font-family: 'Poppins', sans-serif;">Compartilhe! Link do app: https://univespcalculadora.netlify.app/ </p>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 100%; margin: 0 auto;">
-                
-                <a href="https://api.whatsapp.com/send?text=Confira%20o%20Univesp%20Hub!%20Calculadora%20de%20Notas%20e%20Ferramentas:%20https://univespcalculadora.netlify.app/" target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 4px; padding: 8px 5px; background: #25D366; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;">
-                    <i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> WhatsApp
-                </a>
-                
-                <a href="https://t.me/share/url?url=https://univespcalculadora.netlify.app/&text=Confira%20o%20Univesp%20Hub!%20Calculadora%20de%20Notas%20e%20Ferramentas%20para%20alunos." target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 4px; padding: 8px 5px; background: #0088cc; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;">
-                    <i data-lucide="send" style="width: 14px; height: 14px;"></i> Telegram
-                </a>
-
-                <a href="https://twitter.com/intent/tweet?url=https://univespcalculadora.netlify.app/&text=Confira%20o%20Univesp%20Hub!%20Calculadora%20de%20Notas%20e%20Ferramentas%20para%20alunos." target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 4px; padding: 8px 5px; background: #000000; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;">
-                    <i data-lucide="twitter" style="width: 14px; height: 14px;"></i> X
-                </a>
-
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://univespcalculadora.netlify.app/" target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 4px; padding: 8px 5px; background: #1877F2; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;">
-                    <i data-lucide="facebook" style="width: 14px; height: 14px;"></i> Facebook
-                </a>
-
-                <a href="mailto:?subject=Dica:%20Univesp%20Hub&body=Oi!%20Dá%20uma%20olhada%20nessa%20Calculadora%20de%20Notas%20e%20Hub%20da%20Univesp:%20https://univespcalculadora.netlify.app/" target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 4px; padding: 8px 5px; background: #EA4335; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;">
-                    <i data-lucide="mail" style="width: 14px; height: 14px;"></i> Gmail
-                </a>
-
-                <a href="https://www.instagram.com/" target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 4px; padding: 8px 5px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500; font-family: 'Inter', sans-serif; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box;">
-                    <i data-lucide="instagram" style="width: 14px; height: 14px;"></i> Instagram
-                </a>
-            </div>
-
-
-
-            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
-                <p style="margin-bottom: 12px; font-weight: 700; color: #374151; font-family: 'Poppins', sans-serif; font-size: 13px; text-transform: uppercase;">Download</p>
-                <div style="display: flex; justify-content: center; gap: 12px;">
-                    <button id="install-btn" aria-label="Instalar no Android" style="display: flex; justify-content: center; align-items: center; gap: 6px; padding: 8px 16px; background: #3DDC84; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-family: 'Inter', sans-serif; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer; width: 130px; flex: 0 0 130px; box-sizing: border-box;">
-                        <i data-lucide="smartphone" style="width: 16px; height: 16px;"></i> Android
-                    </button>
-                    <button id="install-btn" aria-label="Instruções para iOS" style="display: flex; justify-content: center; align-items: center; gap: 6px; padding: 8px 16px; background: #000000; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-family: 'Inter', sans-serif; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer; width: 130px; flex: 0 0 130px; box-sizing: border-box;" onclick="alert('Para instalar no iOS:\n\n1. Abra este site no Safari.\n2. Toque no botão Compartilhar (quadrado com uma seta para cima).\n3. Role para baixo e selecione \'Adicionar à Tela de Início\'.\n4. Confirme tocando em \'Adicionar\'.')">
-                        <i data-lucide="apple" style="width: 16px; height: 16px;"></i> iOS
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="extra-footer-buttons">
-            <a href="https://www.bvirtual.com.br/" target="_blank" class="btn-extra btn-biblio">
-                <i data-lucide="book-open"></i> Biblioteca
-            </a>
-            <button class="btn-extra btn-faq" onclick="toggleAccordion()">
-                <i data-lucide="help-circle"></i> Dúvidas
-            </button>
-        </div>
-
-
+        
+        
         <div id="accordion-info" class="accordion-box">
     <h3>Sobre o UniHub: O Centro de Comando do Aluno da Universidade Univesp SP</h3>
     <p>O <strong>UniHub</strong> não é apenas um site ou app, é um ecossistema de produtividade e um facilitador acadêmico projetado exclusivamente para centralizar sua rotina na Univesp em um único lugar. Eu desenvolvi esta ferramenta para que você economize tempo, evite a fragmentação de informações entre múltiplos sistemas e, principalmente, nunca mais perca um prazo de entrega ou se perca nos cálculos complexos da média final.</p>
@@ -327,9 +325,8 @@
 
     <h4>Tecnologia PWA: O App do Futuro</h4>
     <p>O UniHub utiliza a tecnologia <strong>PWA (Progressive Web App)</strong>. Isso significa que ele oferece a experiência de um aplicativo nativo de alta performance diretamente no seu navegador, sem a necessidade de baixar arquivos pesados que ocupam a memória do seu smartphone. Ao instalar o UniHub via Chrome ou Safari, você ganha um ícone na sua tela inicial, acesso rápido, carregamento instantâneo e funcionalidades que operam de forma inteligente, garantindo que sua experiência de estudo seja fluida e moderna, independentemente da qualidade da sua conexão.</p>
+    <p>O UniHub é um PWA. Explicando de maneira simples, a ferramenta é um site e um app ao mesmo tempo, uma ferramenta híbrida.</p>
         </div>
-
-        
 
         </div>
 
@@ -374,7 +371,7 @@
                 // Limpa a variável, já que o prompt só pode ser usado uma vez
                 deferredPrompt = null;
             } else {
-                alert('A instalação direta pelo botão não está disponível neste momento (ou o app já está instalado). Tente instalar pelo menu do seu navegador selecionando "Adicionar à tela inicial".');
+                alert('A instalação não está disponível neste momento, ou já está instalado.');
             }
         });
     </script>
